@@ -31,7 +31,6 @@ class _MyAppState extends State<MyApp> {
           Expanded(
             child: Container(
                 child: InAppWebView(
-              initialUrl: 'https://www.nokia.com/',
               initialHeaders: {},
               initialOptions: InAppWebViewGroupOptions(
                   crossPlatform: InAppWebViewOptions(
