@@ -31,6 +31,7 @@ class _MyAppState extends State<MyApp> {
           Expanded(
             child: Container(
                 child: InAppWebView(
+              initialFile: 'assets/index.html',
               initialHeaders: {},
               initialOptions: InAppWebViewGroupOptions(
                   crossPlatform: InAppWebViewOptions(
