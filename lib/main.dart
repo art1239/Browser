@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:browserApp/offlineMultiPageLauncher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,7 +47,12 @@ class _MyAppState extends State<MyApp> {
               onLoadStop:
                   (InAppWebViewController controller, String url) async {},
               onLoadError: (InAppWebViewController controller, String url,
-                  int a, String b) async {},
+                  int a, String b) async {
+                controller.loadFile(assetFilePath: 'assets/spinner.html');
+                OfflineMultiPageLauncher()
+                    .loadPage(url)
+                    .then((value) => controller.loadFile(assetFilePath: value));
+              },
               onLoadHttpError:
                   (controller, url, statusCode, description) async {},
             )),

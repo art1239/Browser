@@ -56,6 +56,7 @@ flutter:
     - assets/css/
     - assets/js/
     - assets/favicon.png
+    - assets/spinner.html
   
   
  
